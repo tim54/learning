@@ -1,7 +1,5 @@
 package com.home.learning.structures;
 
-import javafx.beans.binding.ObjectExpression;
-
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
