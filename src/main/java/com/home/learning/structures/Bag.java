@@ -17,9 +17,9 @@ public class Bag<Item> implements Iterable<Item>{
         n = 0;
     }
 
-    public int size(){ return n; }
+    public int size() { return n; }
 
-    public boolean isEmpty(){ return first == null; }
+    public boolean isEmpty() { return first == null; }
 
     public void add(Item item){
         Node<Item> oldFirst = first;
@@ -36,12 +36,10 @@ public class Bag<Item> implements Iterable<Item>{
     private class ListIterator<Item> implements Iterator<Item> {
         private Node<Item> current;
 
-        public ListIterator(Node<Item> first){
-            current = first;
-        }
+        public ListIterator(Node<Item> first) { current = first; }
 
-        public boolean hasNext(){ return current != null; }
-        public void delete(){ throw new UnsupportedOperationException(); }
+        public boolean hasNext() { return current != null; }
+        public void delete() { throw new UnsupportedOperationException(); }
 
         public Item next(){
             if (!hasNext()) throw new NoSuchElementException();

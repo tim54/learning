@@ -1,4 +1,4 @@
-package com.home.learning.solutions;
+package com.home.learning.solutions.strings;
 
 public class PermutationInString {
 
