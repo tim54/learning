@@ -1,10 +1,10 @@
-package com.home.learning.search;
+package com.home.learning.sorting;
 
 import java.util.Comparator;
 
 public class Insertion {
 
-    private Insertion() {}
+    private Insertion() { }
 
     public static void sort(Comparable[] a){
         int n = a.length;
