@@ -1,10 +1,11 @@
 package com.home.learning.structures;
 
-import javax.naming.OperationNotSupportedException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class ArrayBag<Item> implements Iterable<Item> {
+    private static int CAPACITY = 4;
+
     private int n;
     private Item a[];
 
@@ -21,15 +22,18 @@ public class ArrayBag<Item> implements Iterable<Item> {
         return n == 0;
     }
 
-    public void add(Item item){
-        if (a.length == n){
-            Item temp[] = (Item[]) new Object[a.length * 2];
-
-            for (int i = 0; i < a.length; i++){
-                temp[i] = a[i];
-            }
-            a = temp;
+    private void resize(int capacity){
+        assert capacity >= n;
+        Item[] temp = (Item []) new Object[CAPACITY];
+        for (int i = 0; i < n; i++){
+            temp[i] = a[i];
         }
+        a = temp;
+    }
+
+    public void add(Item item){
+        if (n == a.length) resize(2 * a.length);
+        a[n++] = item;
     }
 
     public Iterator<Item> iterator() {
