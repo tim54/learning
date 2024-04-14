@@ -1,4 +1,4 @@
-package com.home.learning.miscallenious.misc;
+package com.home.learning.solutions.misc;
 
 public class SieveOfEratosthenes {
 

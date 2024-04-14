@@ -1,4 +1,4 @@
-package com.home.learning.miscallenious.classes;
+package com.home.learning.solutions.classes;
 
 import java.util.ArrayList;
 import java.util.List;

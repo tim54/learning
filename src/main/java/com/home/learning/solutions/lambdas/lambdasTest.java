@@ -1,4 +1,4 @@
-package com.home.learning.miscallenious.lambdas;
+package com.home.learning.solutions.lambdas;
 
 import java.util.function.Predicate;
 
