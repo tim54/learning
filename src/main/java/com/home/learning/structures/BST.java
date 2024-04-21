@@ -55,6 +55,7 @@ public class BST<Key extends Comparable<Key>, Value> {
     public void put(Key key, Value val){
         if (key == null) throw new IllegalArgumentException("Cannot be null");
         if (val == null){
+            // delete if empty
             return;
         }
         root = put(root, key, val);
@@ -68,5 +69,21 @@ public class BST<Key extends Comparable<Key>, Value> {
         else x.val = val;
         x.size = 1 + size(x.left) + size(x.right);
         return x;
+    }
+
+    public void deleteMin(){
+        if (isEmpty()) throw new NoSuchElementException();
+        root = deleteMin(root);
+    }
+
+    private Node deleteMin(Node x){
+        if (x.left == null) return x.right;
+        x.left = deleteMin(x.left);
+        x.size = size(x.left) + size(x.right) + 1;
+        return x;
+    }
+
+    public void deleteMax(){
+
     }
 }
