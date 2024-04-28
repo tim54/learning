@@ -84,6 +84,14 @@ public class BST<Key extends Comparable<Key>, Value> {
     }
 
     public void deleteMax(){
+        if (size() == 0) throw new UnsupportedOperationException();
+        deleteMax(root);
+    }
 
+    private Node deleteMax(Node x){
+        if (x.right == null) return x.left;
+        x.right = deleteMax(x.right);
+        x.size = size(x.left) + size(x.right) + 1;
+        return x;
     }
 }

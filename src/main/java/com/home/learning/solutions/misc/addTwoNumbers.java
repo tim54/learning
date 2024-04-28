@@ -11,7 +11,9 @@ package com.home.learning.solutions.misc;
  * }
  */
 class addTwoNumbers {
-    public class ListNode { int val;
+
+    public class ListNode {
+        int val;
         ListNode next;
         ListNode() {}
         ListNode(int val) { this.val = val; }
